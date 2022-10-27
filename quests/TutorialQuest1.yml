@@ -1,0 +1,31 @@
+TQ1:
+  Active: true
+  RepeatType: TIMES
+  RepeatValue: "1"
+  ShortDescription: Tutorial 1
+  IntroText: "For starters. Remove those nasty sand blocks in the entrance will ya?"
+  CompletedText: "Good job!"
+  DeliverText: "Here, I think you will need this."
+  NagMessage: "*shoopa doopa*:*whoopa skoopaaa*:*dingely ding dong*"
+  Deliver: NPC
+  ## Rewards
+  Rewards:
+    ## Each reward needs to start with a dash "-"
+    ## Type is the type of reward.
+    ## Check the documentation of each reward type to find out which variables need to be set
+    - Type: SItem
+      Item: Diamond_Sword
+      Amount: 1
+  ## Requirements
+  Requirements:
+    ## Each requirement needs to start with a dash "-"
+    ## Type is the type of requirement.
+    ## Check the documentation of each requirement type to find out which variables need to be set
+    - Type: DoneQuest
+      QuestID: TQ1
+  Objectives:
+    '0':
+      Type: DestroyBlock
+      ShortDescription: Remove the sand blocks
+      Block: SAND
+      Amount: 4
