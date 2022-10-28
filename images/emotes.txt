@@ -1,5 +1,5 @@
 sad
-mad/angry
+mad/angry [+]
 shocked [+]
 happy [+]
 talking
