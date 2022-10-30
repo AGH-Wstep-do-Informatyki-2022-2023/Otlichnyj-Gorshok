@@ -20,11 +20,11 @@ def getOperatingSystem():
 
 
 def getGameDirectory():
-    path = os.getcwd().split('/')
+    path = os.getcwd().split('\\')
     home_path = ''
     if getOperatingSystem() == SYSTEM_NAME_WINDOWS:
         for dir in path:
-            home_path += f'/{dir}'
+            home_path += f'{dir}/'
             if dir == GAME_NAME:
                 break
     else:
