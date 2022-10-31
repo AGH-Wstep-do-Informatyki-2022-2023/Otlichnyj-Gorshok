@@ -1,6 +1,6 @@
-Q1:
+TQ1:
   Active: true
-  ShortDescription: Tutorial 1
+  ShortDescription: Tutorial Quest 1
   IntroText: "For starters. Remove those nasty sand blocks in the entrance will ya?"
   CompletedText: "Good job!"
   ## Rewards
@@ -24,9 +24,9 @@ Q1:
       - "DASW"
     Gorshok_2: "QWDQWDQDQWDQWDQDQWDQWD"
     Player_2: "WWWDDDWDDWXD"
-Q2:
+TQ2:
   Active: true
-  ShortDescription: Tutorial 2
+  ShortDescription: Tutorial Quest 2
   IntroText: "For starters. Remove those nasty sand blocks in the entrance will ya?"
   CompletedText: "Good job!"
   ## Rewards
