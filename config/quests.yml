@@ -1,26 +1,48 @@
-Active: true
-ShortDescription: Tutorial 1
-IntroText: "For starters. Remove those nasty sand blocks in the entrance will ya?"
-CompletedText: "Good job!"
-## Rewards
-Rewards:
-## Each reward needs to start with 'n' index"
-## Type is the type of reward.
-  '0':
-    Type: SItem
-    Item: Diamond_Sword
-    Amount: 1
-  ## Requirements
-Requirements:
-  '0':
-    Type: DoneQuest
-    QuestID: TQ1
-    LVL: 10
-StoryLine:
-  Gorshok_1: "OFEMNFEOMNFOWEOFNWOENFR"
-  Player_1:
-    - "WSAD"
-    - "DASW"
-  Gorshok_2: "QWDQWDQDQWDQWDQDQWDQWD"
-  Player_2: "WWWDDDWDDWXD"
+Q1:
+  Active: true
+  ShortDescription: Tutorial 1
+  IntroText: "For starters. Remove those nasty sand blocks in the entrance will ya?"
+  CompletedText: "Good job!"
+  ## Rewards
+  Rewards:
+  ## Each reward needs to start with 'n' index"
+  ## Type is the type of reward.
+    '0':
+      Type: SItem
+      Item: Diamond_Sword
+      Amount: 1
+    ## Requirements
+  Requirements:
+    '0':
+      Type: DoneQuest
+      QuestID: TQ1
+      LVL: 10
+  StoryLine:
+    Gorshok_1: "OFEMNFEOMNFOWEOFNWOENFR"
+    Player_1:
+      - "WSAD"
+      - "DASW"
+    Gorshok_2: "QWDQWDQDQWDQWDQDQWDQWD"
+    Player_2: "WWWDDDWDDWXD"
+Q2:
+  Active: true
+  ShortDescription: Tutorial 2
+  IntroText: "For starters. Remove those nasty sand blocks in the entrance will ya?"
+  CompletedText: "Good job!"
+  ## Rewards
+  Rewards:
+    ## Each reward needs to start with 'n' index"
+    ## Type is the type of reward.
+    '0':
+      Type: SItem
+      Item: Diamond_Sword
+      Amount: 1
+    ## Requirements
+  Requirements:
+    '0':
+      Type: DoneQuest
+      QuestID: TQ1
+      LVL: 10
+  StoryLine:
+    Gorshok_1: "OFEMNFEOMNFOWEOFNWOENFR"
 

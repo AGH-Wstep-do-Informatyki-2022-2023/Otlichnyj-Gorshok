@@ -1,39 +1,7 @@
 import os
-import sys
+import yaml
 
-GAME_NAME = 'Otlichnyj-Gorshok'
-SYSTEM_NAME_LINUX = 'Linux'
-SYSTEM_NAME_MACOS = 'OS X'
-SYSTEM_NAME_WINDOWS = 'Windows'
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+QUEST_FILE = yaml.load(open(f'{ROOT_DIR}/config/quests.yml', 'r'), Loader=yaml.FullLoader)
+CONFIG_FILE = yaml.load(open(f'{ROOT_DIR}/config/config.yml', 'r'), Loader=yaml.FullLoader)
 
-
-def getOperatingSystem():
-    platforms = {
-        'linux1': 'Linux',
-        'linux2': 'Linux',
-        'darwin': 'OS X',
-        'win32': 'Windows'
-    }
-    if sys.platform not in platforms:
-        return sys.platform
-    return platforms[sys.platform]
-
-
-def getGameDirectory():
-    path = os.getcwd().split('\\')
-    home_path = ''
-    if getOperatingSystem() == SYSTEM_NAME_WINDOWS:
-        for dir in path:
-            home_path += f'{dir}/'
-            if dir == GAME_NAME:
-                break
-    else:
-        for dir in path[1:]:
-            home_path += f'/{dir}'
-            if dir == GAME_NAME:
-                break
-    return home_path
-
-
-QUEST_FILE = f'{getGameDirectory()}/config/quests.yml'
-CONFIG_FILE = f'{getGameDirectory()}/config/config.yml'
