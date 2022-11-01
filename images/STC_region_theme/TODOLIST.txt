@@ -1,8 +1,0 @@
-TODO List:
-1) Create yaml file reader
-2) Create window game creator (game interface)
-3) MySQL connection with user registration and login options
-4) Map mechanics class (regions)
-5) Character mechanics (HP, Daily Tasks, EXP, skills etc.)
-6) Enemies and Bosses mechanics
-7) Saving
