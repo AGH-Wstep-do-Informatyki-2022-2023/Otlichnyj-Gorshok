@@ -1,20 +1,29 @@
 ### Otlichnyj Gorshok
 •	Gra jest fabularna, użytkownik przechodzi przez fabułę (przez świat prowadzi go garnek)
+
 •	Mapa świata jest podzielona na kilka regionów (z przejście danego regionu otrzymuje nagrodę w postaci nowej umiejętności) -> regiony ułożone w sposób procesu produkcji granka (co jest potrzebne do wyprodukowania garnka … ? drewno, minerały (stal, węgiel), piasek -> szkło, fabryki, piece ogień, cyber -.-); w każdym regionie jest kilka (9 min.) mobów do pokonania, na końcu każdego regionu jest do pokonania boss (lub bossy max.3). Regiony mogą mieć kilka części w jednym (podział na subregiony)
+
 •	Za pokonanie wroga gracz otrzymuje punkty za które może ulepszać swoje umiejętności, w przypadku pokonania bossa regionu użytkownik otrzymuje nową umiejętność 
+
 •	Gracz za każdym razem może zmienić umiejętności jednak jest to ograniczone do maksymalnie dwóch (skill i ult), aby użyć ulta użytkownik może przeczekać atak użytkownika albo rozwiązać zagadkę (potrzebne jest 3 punkty za użycie skilla oraz 5 za użycie ulta; maksymalnie kumuluje się do 6 punktów), za każde przeczekanie lub rozwiązanie zagadki użytkownik dostaje 1 punkt (można wybrać czy czekamy, czy rozwiązujemy zagadkę), natomiast na czekania użytkownik traci hp (tak samo w przypadku błędnie rozwiązanej zagadki - %hp) 
-•	Zagadki są na poziomie regionu (im dalej tym ciężej) i obejmują zagadnienia z matematyki, fizyki informatyki (sieci + programowanie).
+
+•	Zagadki są na poziomie regionu (im dalej tym ciężej) i obejmują zagadnienia z matematyki, fizyki informatyki (sieci + programowanie)
+
 •	Długoterminowość - rozwiązanie: … CZYLI CO ZROBIĆ ŻEBY GRA NIE BYŁA NUDNA (clicker, dobra ekonomia gry, sklep, lvl - ograniczenia, exp, balans, daily regeneracja HP -> wprowadza to limit pokonanych mobów/dzień) 
+
 •	Pobieranie i zapis danych z bazy danych MySQL (AGH) - opcjonalne (późniejsza faza rozwoju gry)
+
 •	Użytkownik na pewnym etapie gry otrzymuje sojuszników, których może ulepszać
+
 •	Do konfiguracji korzystamy z plików yaml (.yml) (https://yaml.org/spec/1.2.2/)
+
 •	Wykorzystywane obrazki generujemy ze strony (https://www.craiyon.com/) i zapisujemy w folderze images na GoogleDrive (motywy regionów, aby wygenerować podobne należy dopisać painted by van gogh)
 
 ### Linki
 [Python Docs](https://docs.python.org/3.10/)\
 [YAML](https://yaml.org/spec/1.2.2/)\
 [Crayion](https://www.craiyon.com/)\
-[Mail](https://poczta.agh.edu.pl)\
+[Mail](https://poczta.agh.edu.pl)
 
 ### Meetings (Otlichnyj Gorshok)
 |  Date   |                            Komentarz                            |
