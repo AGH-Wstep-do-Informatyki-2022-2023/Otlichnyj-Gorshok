@@ -1,4 +1,5 @@
 ### Otlichnyj Gorshok
+![My Image](LOGO.jpg)
 •	Gra jest fabularna, użytkownik przechodzi przez fabułę (przez świat prowadzi go garnek)
 
 •	Mapa świata jest podzielona na kilka regionów (z przejście danego regionu otrzymuje nagrodę w postaci nowej umiejętności) -> regiony ułożone w sposób procesu produkcji granka (co jest potrzebne do wyprodukowania garnka … ? drewno, minerały (stal, węgiel), piasek -> szkło, fabryki, piece ogień, cyber -.-); w każdym regionie jest kilka (9 min.) mobów do pokonania, na końcu każdego regionu jest do pokonania boss (lub bossy max.3). Regiony mogą mieć kilka części w jednym (podział na subregiony)
