@@ -1,7 +1,11 @@
 import tkinter as tk
 
+from src.python.otlichnyj_gorshok.window_manager.CharacterFrame import CharacterFrame
+from src.python.otlichnyj_gorshok.window_manager.MapFrame import MapFrame
+from src.python.otlichnyj_gorshok.window_manager.SkillsFrame import SkillsFrame
 
-class MainWindow(tk.Tk):
+
+class MainGameWindow(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -12,8 +16,8 @@ class MainWindow(tk.Tk):
         left_frame.pack(side="left", fill="both", expand=True)
 
         # Tworzenie paska po prawej stronie
-        right_frame = tk.Frame(self, width=600, height=600, bg="white")
-        right_frame.pack(side="right", fill="both", expand=True)
+        self.right_frame = tk.Frame(self, width=600, height=600, bg="white")
+        self.right_frame.pack(side="right", fill="both", expand=True)
 
         # Tworzenie przycisków
         character_button = tk.Button(left_frame, text="Postać", command=self.show_character_frame)
@@ -24,9 +28,9 @@ class MainWindow(tk.Tk):
         skills_button.pack()
 
         # Tworzenie ramki dla każdego okna
-        self.character_frame = tk.Frame(right_frame, width=600, height=600, bg="yellow")
-        self.map_frame = tk.Frame(right_frame, width=600, height=600, bg="blue")
-        self.skills_frame = tk.Frame(right_frame,  width=600, height=600, bg="purple")
+        self.character_frame = CharacterFrame(self.right_frame)
+        self.map_frame = MapFrame(self.right_frame)
+        self.skills_frame = SkillsFrame(self.right_frame)
 
     def show_character_frame(self):
         self.character_frame.pack(side="right", fill="both", expand=True)
@@ -42,8 +46,3 @@ class MainWindow(tk.Tk):
         self.character_frame.pack_forget()
         self.map_frame.pack_forget()
         self.skills_frame.pack(side="right", fill="both", expand=True)
-
-
-if __name__ == "__main__":
-    app = MainWindow()
-    app.mainloop()
