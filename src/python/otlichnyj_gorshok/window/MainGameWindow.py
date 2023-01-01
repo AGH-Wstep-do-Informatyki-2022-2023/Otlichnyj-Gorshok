@@ -1,8 +1,8 @@
 import tkinter as tk
 
-from src.python.otlichnyj_gorshok.window_manager.CharacterFrame import CharacterFrame
-from src.python.otlichnyj_gorshok.window_manager.MapFrame import MapFrame
-from src.python.otlichnyj_gorshok.window_manager.SkillsFrame import SkillsFrame
+from src.python.otlichnyj_gorshok.window.CharacterFrame import CharacterFrame
+from src.python.otlichnyj_gorshok.window.MapFrame import MapFrame
+from src.python.otlichnyj_gorshok.window.SkillsFrame import SkillsFrame
 
 
 class MainGameWindow(tk.Tk):
