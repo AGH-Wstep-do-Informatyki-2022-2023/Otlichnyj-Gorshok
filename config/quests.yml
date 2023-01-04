@@ -18,7 +18,6 @@ TQ1:
       QuestID: None
       LVL: 10
   StoryLine:
-    #!!!
     #special characters:
     # '<=)> -> <emote>
     Gorshok_1: "<=)> Let's get some food in us, and then we'll Whoa!"

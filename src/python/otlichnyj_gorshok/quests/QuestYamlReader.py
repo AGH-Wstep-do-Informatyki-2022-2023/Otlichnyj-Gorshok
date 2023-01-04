@@ -1,7 +1,7 @@
+from src.python.otlichnyj_gorshok.quests.QuestUtil import QuestUtil
 from src.python.otlichnyj_gorshok.util import Cons
-from src.python.otlichnyj_gorshok.util.Util import Util
 
-util = Util()
+util = QuestUtil()
 
 for questID, valueQuestID in Cons.QUEST_FILE.items():
     if questID == Cons.USER_FILE['quest']:
@@ -11,7 +11,6 @@ for questID, valueQuestID in Cons.QUEST_FILE.items():
                 print(valueQuestID['IntroText'])
                 for sender, message in dict(valueQuest).items():
                     sender = util.change_sender_name(sender)
-                    # only player has choice
                     if type(message) is list:
                         for index in range(0, len(message)):
                             print(f"{index}) {message[index]}")

@@ -17,10 +17,13 @@ USER_FILE = yaml.load(open(f'{ROOT_DIR}/config/user.yml', 'r'), Loader=yaml.Full
 
 
 # creates a string list of all images in a directory Otlichnyj-Gorshok/images/._gorshok_images
-GORSHOK_LIST_IMAGES_TEMP = (os.listdir(f'{ROOT_DIR}/images/._gorshok_images'))
+GORSHOK_LIST_IMAGES_TEMP = (os.listdir(f'{ROOT_DIR}images/._gorshok_images'))
 
-# dict binds emotes and paths to their jpges
-# each image in Otlichnyj-Gorshok/images/._gorshok_images is described as <emote>.jpg/jpeg
+
+# dict binds emotes and paths to their pnges
+# each image in Otlichnyj-Gorshok/images/._gorshok_images is described as <emote>.png
 GORSHOK_BIND_IMAGES = dict([((GORSHOK_LIST_IMAGES_TEMP[index].split('.'))[0],
-                             f'{ROOT_DIR}/images/._gorshok_images/{GORSHOK_LIST_IMAGES_TEMP[index]}')
+                             f'{ROOT_DIR}images/._gorshok_images/{GORSHOK_LIST_IMAGES_TEMP[index]}')
                             for index in range(0, len(GORSHOK_LIST_IMAGES_TEMP))])
+print(GORSHOK_LIST_IMAGES_TEMP[0])
+print(GORSHOK_BIND_IMAGES)
