@@ -1,5 +1,6 @@
 import re
 from time import sleep
+from src.python.otlichnyj_gorshok.util import Cons
 
 
 class QuestUtil:
@@ -16,15 +17,20 @@ class QuestUtil:
         return output_sender
 
     @staticmethod
-    def sender_message_analysis(message):
+    def message_analysis(message):
         clean_message = ''
         emote_message = ''
         for word in str(message).split(' '):
-            emote = re.search('<(.*)>', word)
-            if emote is None:
+            game_var = re.search('<(.*)>', word)
+            # only emotes has len == 2
+            if game_var is None:
                 clean_message += word + ' '
             else:
-                emote_message += str(emote.group(1))
+                # only emotes has len == 2
+                if len(str(game_var.group(1))) > 2:
+                    clean_message += Cons.CONFIG_FILE[str(game_var.group(1))] + ' '
+                else:
+                    emote_message += str(game_var.group(1))
         return clean_message, emote_message
 
     @staticmethod
