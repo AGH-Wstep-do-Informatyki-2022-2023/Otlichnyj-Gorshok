@@ -1,28 +1,36 @@
 from src.python.otlichnyj_gorshok.quests.QuestUtil import QuestUtil
 from src.python.otlichnyj_gorshok.util import Cons
 
-util = QuestUtil()
 
-def get_quest():
-    questStoryLineList = []
-    for questID, valueQuestID in Cons.QUEST_FILE.items():
-        if questID == Cons.USER_FILE['quest']:
-            for keyQuest, valueQuest in dict(valueQuestID).items():
-                if keyQuest == 'StoryLine':
-                    questStoryLineList.append(valueQuestID['IntroText'])
-                    for sender, message in dict(valueQuest).items():
-                        sender = util.change_sender_name(sender)
-                        if type(message) is list:
-                            for index in range(0, len(message)):
-                                print(f"{index}) {message[index]}")
-                            choice = int(input("Choose your option: "))
-                            print(f"{sender}: {message[choice]}")
-                        else:
-                            print(f"{sender}: {util.sender_message_analysis(message)[0]}")
+class QuestYamlReader:
+
+    def get_quest_dialog(self):
+        questUtil = QuestUtil()
+        questStorylineList = []
+        for questID, valueQuestID in Cons.QUEST_FILE.items():
+            if questID == Cons.USER_FILE['quest']:
+                for keyQuest, valueQuest in dict(valueQuestID).items():
+                    if keyQuest == 'StoryLine':
+                        questStorylineList.append(
+                            ("(" + questUtil.message_analysis(valueQuestID['IntroText'])[0] + ")", ''))
+                        for sender, message in dict(valueQuest).items():
+                            sender = questUtil.change_sender_name(sender)
+                            if sender == 'Player':
+                                sender = Cons.CONFIG_FILE['player_ingame_name']
+
                             if sender == Cons.CONFIG_FILE['gorshok_ingame_name']:
-                                print(f'{sender} emote: {util.sender_message_analysis(message)[1]}')
-                                print(f'{sender} emote path: '
-                                      f'{Cons.GORSHOK_BIND_IMAGES[util.sender_message_analysis(message)[1]]}')
+                                questStorylineList.append((sender + ": " + questUtil.message_analysis(message)[0],
+                                                           Cons.GORSHOK_BIND_IMAGES[
+                                                               questUtil.message_analysis(message)[1]]))
+                            elif sender == '':
+                                questStorylineList.append(
+                                    ("(" + questUtil.message_analysis(message)[0] + ")", ''))
+
                             else:
-                                pass
-                    print(valueQuestID['CompletedText'])
+                                questStorylineList.append(
+                                    (sender + ": " + questUtil.message_analysis(message)[0], 'path'))
+                        questStorylineList.append(
+                            ("(" + questUtil.message_analysis(valueQuestID['CompletedText'])[0] + ")", ''))
+                        questStorylineList.append(('', ''))
+        # List: [(sender_1, message_1, path_to_image_1), (...), ...]
+        return questStorylineList

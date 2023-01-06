@@ -1,7 +1,7 @@
-TQ1:
+JQ1:
   Active: true
-  ShortDescription: Tutorial Quest 1
-  IntroText: "For starters. Remove those nasty sand blocks in the entrance will ya?"
+  ShortDescription: JQ1
+  IntroText: "W pewien pochmurny dzien, nasz bohater <player_ingame_name> zaplanowal nie wychodzic ze swojego przytulnego domku, nie wiedzial jednak, ze jego postepowanie doprowadzi go do poznania nowego przyjaciela... Gdy <player_ingame_name> postanowil przyrzadzic sobie posilek niepostrzezenie jego naczynie, w ktorym gotowal zaczelo zmieniac kolor, nastepnie w magiczny sposob garnuszek zaczal mowiac oraz lewitowac..."
   CompletedText: "Quest completed! Good job!"
   ## Rewards
   Rewards:
@@ -20,16 +20,14 @@ TQ1:
   StoryLine:
     #special characters:
     # '<=)> -> <emote>
-    Gorshok_1: "<=)> Let's get some food in us, and then we'll Whoa!"
-    Player_1: "Where did you come from?"
-    Gorshok_2: "<=O> Well, as you can see, I am merely sitting here and reviewing what we have deduced thus far. "
-    Player_2: "You were gone for ages, and now you're suddenly sitting here musing to yourself? Where have you been, anyway?"
-    Gorshok_3: "<=D> ..."
-    Player_3:
-      - "???"
-      - "Hmmm"
-      - "Will you say something?"
-      - "Gorshok ?! Hellooooo !"
+    Gorshok_1: "<=)> Heeeeeeeeeeeeeeeeeeeej, jestem <gorshok_ingame_name>, dzieki tobie odzyskalem wolnosc."
+    Player_1: "Zaraz, zaraz ty mozesz mowic ?"
+    Gorshok_2: "<=)> Twoja potrawa, ktora gotowales skladala sie ze swiezych produktow, a ogien, na ktorym byl garnuszek, byl zapalony o idealnej porze. Dzieki temu przepisowi oraz wszechobecnej magii moglem uciec z mego wiezienia."
+    Player_2: "Jestem zdezorientowany, kto cie uwiezil?"
+    Gorshok_3: "<=(> Problem polega na tym, ze nie pamietam kto mi to zrobil. Prosze pomoz mi dotrzec do prawdy."
+    Player_3: "Miedzy Bogiem, a prawda nie rozumiem nic z twoich slow."
+    _1: "Z zewnatrz slychac niepokojace dzwieki."
+
 TQ2:
   Active: true
   ShortDescription: Tutorial Quest 2
@@ -51,4 +49,3 @@ TQ2:
       LVL: 10
   StoryLine:
     Gorshok_1: "OFEMNFEOMNFOWEOFNWOENFR"
-

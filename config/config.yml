@@ -1,9 +1,8 @@
 game_name: 'Otlichnyj-Gorshok'
 game_name_short: '[OG]'
-game_icon: ''
-game_width: 1.0
-game_height: 2.0
+game_geometry: '1182x1024'
 version: 1.0.0
 #authors:
 gorshok_ingame_name: 'Gorshok'
-player_ingame_name: 'Player'
+player_ingame_name: 'Kastryulyj'
+starting_quest: 'JQ1'
