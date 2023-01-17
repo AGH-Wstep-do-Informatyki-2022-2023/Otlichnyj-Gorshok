@@ -31,6 +31,6 @@ class QuestYamlReader:
                                     (sender + ": " + questUtil.message_analysis(message)[0], 'path'))
                         questStorylineList.append(
                             ("(" + questUtil.message_analysis(valueQuestID['CompletedText'])[0] + ")", ''))
-                        questStorylineList.append(('', ''))
+                        questStorylineList.append((' ', ''))
         # List: [(sender_1, message_1, path_to_image_1), (...), ...]
         return questStorylineList
